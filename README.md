@@ -14,7 +14,7 @@ rust-ayumi = "0.1"
 ```
 
 ## Documentation
-Wisit [Github pages]() of the project or build it with 
+Wisit [Github pages](https://pacmancoder.github.io/rust-ayumi) of the project or build it with 
 ```bash
 cargo doc
 ```
