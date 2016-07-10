@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Ayumi` struct in crate `ayumi`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Ayumi">
+
+    <title>ayumi::Ayumi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>ayumi</a></p><script>window.sidebarCurrent = {name: 'Ayumi', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>ayumi</a>::<wbr><a class='struct' href=''>Ayumi</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-202' class='srclink' href='../src/ayumi/src/lib.rs.html#156-158' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Ayumi {
+    // some fields omitted
+}</pre><div class='docblock'><p>Main library structure
+use <code>new</code> function for instance creation</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../ayumi/struct.Ayumi.html' title='ayumi::Ayumi'>Ayumi</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(chip: <a class='enum' href='../ayumi/enum.ChipType.html' title='ayumi::ChipType'>ChipType</a>, freq: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, sample_rate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='struct' href='../ayumi/struct.Ayumi.html' title='ayumi::Ayumi'>Ayumi</a></code></h4>
+<div class='docblock'><p>Constructs new Ayumi instance</p>
+
+<h1 id='arguments' class='section-header'><a href='#arguments'>Arguments</a></h1>
+<ul>
+<li><code>chip</code> - <code>ChipType</code> of emulator</li>
+<li><code>freq</code> - clock frequency of chip</li>
+<li><code>sample_rate</code> - samples count per second</li>
+</ul>
+
+<h1 id='panics' class='section-header'><a href='#panics'>Panics</a></h1>
+<ul>
+<li><code>freq</code> &lt;= 0</li>
+<li><code>sample_rate</code> &lt;= 0`</li>
+<li>ffi function call error</li>
+</ul>
+</div><h4 id='method.tone' class='method'><code>fn <a href='#method.tone' class='fnname'>tone</a>&lt;'a&gt;(&amp;'a mut self, channel: <a class='enum' href='../ayumi/enum.ToneChannel.html' title='ayumi::ToneChannel'>ToneChannel</a>) -&gt; <a class='struct' href='../ayumi/struct.ToneDescriptor.html' title='ayumi::ToneDescriptor'>ToneDescriptor</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns tone channel descriptor of type <code>ToneDescriptor</code> for configuring it.</p>
+</div><h4 id='method.noise' class='method'><code>fn <a href='#method.noise' class='fnname'>noise</a>&lt;'a&gt;(&amp;'a mut self) -&gt; <a class='struct' href='../ayumi/struct.NoiseDescriptor.html' title='ayumi::NoiseDescriptor'>NoiseDescriptor</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns noise channel descriptor of type <code>NoiseDescriptor</code> for configuring it.</p>
+</div><h4 id='method.envelope' class='method'><code>fn <a href='#method.envelope' class='fnname'>envelope</a>&lt;'a&gt;(&amp;'a mut self) -&gt; <a class='struct' href='../ayumi/struct.EnvelopeDescriptor.html' title='ayumi::EnvelopeDescriptor'>EnvelopeDescriptor</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns envelope descriptor of type <code>EnvelopeDescriptor</code> for configuring it.</p>
+</div><h4 id='method.process' class='method'><code>fn <a href='#method.process' class='fnname'>process</a>(&amp;mut self) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Renders next sample</p>
+</div><h4 id='method.remove_dc' class='method'><code>fn <a href='#method.remove_dc' class='fnname'>remove_dc</a>(&amp;mut self) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Removes the DC offset from the current sample</p>
+</div><h4 id='method.sample' class='method'><code>fn <a href='#method.sample' class='fnname'>sample</a>(&amp;self) -&gt; <a class='struct' href='../ayumi/struct.StereoSample.html' title='ayumi::StereoSample'>StereoSample</a></code></h4>
+<div class='docblock'><p>Returns sound sample of type StereoSample</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "ayumi";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

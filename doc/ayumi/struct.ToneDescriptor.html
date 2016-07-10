@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ToneDescriptor` struct in crate `ayumi`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ToneDescriptor">
+
+    <title>ayumi::ToneDescriptor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>ayumi</a></p><script>window.sidebarCurrent = {name: 'ToneDescriptor', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>ayumi</a>::<wbr><a class='struct' href=''>ToneDescriptor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-153' class='srclink' href='../src/ayumi/src/lib.rs.html#28-31' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct ToneDescriptor&lt;'a&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>Represents tone channel control structure</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;'a&gt; <a class='struct' href='../ayumi/struct.ToneDescriptor.html' title='ayumi::ToneDescriptor'>ToneDescriptor</a>&lt;'a&gt;</code></h3><div class='impl-items'><h4 id='method.period' class='method'><code>fn <a href='#method.period' class='fnname'>period</a>(&amp;mut self, period: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Changes period of current tone channel</p>
+
+<h1 id='panics' class='section-header'><a href='#panics'>Panics</a></h1>
+<p>When <code>period</code> &lt; 0</p>
+</div><h4 id='method.pan' class='method'><code>fn <a href='#method.pan' class='fnname'>pan</a>(&amp;mut self, pan: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, equal_power: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Changes pan of current tone channel</p>
+
+<h1 id='arguments' class='section-header'><a href='#arguments'>Arguments</a></h1>
+<ul>
+<li><code>pan</code> - value in range 0...1, which represents pan of channel</li>
+<li><code>equal_power</code> - flag, which used to enable &quot;equal_power&quot; panning</li>
+</ul>
+</div><h4 id='method.volume' class='method'><code>fn <a href='#method.volume' class='fnname'>volume</a>(&amp;mut self, volume: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Changes volume of tone channel</p>
+
+<h1 id='arguments-1' class='section-header'><a href='#arguments-1'>Arguments</a></h1>
+<ul>
+<li><code>volume</code> - volume value of cahnnel in range [0...15]
+# Panics
+When value is bigger than 15</li>
+</ul>
+</div><h4 id='method.mixer' class='method'><code>fn <a href='#method.mixer' class='fnname'>mixer</a>(&amp;mut self, tone: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, noise: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, envelope: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; &amp;mut Self</code></h4>
+<div class='docblock'><p>Changes mixer flags of channel, use it to enable/disable sources mixing</p>
+
+<h1 id='arguments-2' class='section-header'><a href='#arguments-2'>Arguments</a></h1>
+<ul>
+<li><code>tone</code> - tone enable flag</li>
+<li><code>noise</code> - noise enable flag</li>
+<li><code>envelope</code> - envelope enable flag</li>
+</ul>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "ayumi";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
