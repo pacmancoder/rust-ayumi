@@ -1,3 +1,25 @@
+// The MIT License (MIT)
+//
+// Copyright (c) 2016 Vladislav Nikonov
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
 //! Bindings to *AY-3-8910* and *YM2149* emulation library
 //! [ayumi](https://github.com/pacmancoder/ayumi-lib)
 #![allow(dead_code)]
@@ -44,7 +66,8 @@ impl<'a> ToneDescriptor<'a> {
 
     /// Changes pan of current tone channel
     /// # Arguments
-    /// - `pan` - value in range 0...1, which represents pan of channel
+    /// - `pan` - value in range 0...1, which represents pan of channel.
+    ///   `0..1 =>  left..right`
     /// - `equal_power` - flag, which used to enable "equal_power" panning
     pub fn pan(&mut self, pan: f64, equal_power: bool) -> &mut Self {
         let pan = if pan > 1.0 {
@@ -161,7 +184,7 @@ impl Ayumi {
     ///
     /// # Arguments
     /// - `chip` - `ChipType` of emulator
-    /// - `freq` - clock frequency of chip
+    /// - `freq` - clock frequency of chip in Hz
     /// - `sample_rate` - samples count per second
     ///
     /// # Panics
